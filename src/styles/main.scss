@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   background: $cor-fundo;
   color: $cor-texto;
   line-height: 1.6;
+  overflow-x: clip;
 }
 
 img {

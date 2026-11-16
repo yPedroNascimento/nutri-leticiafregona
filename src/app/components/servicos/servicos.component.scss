@@ -50,6 +50,9 @@
 }
 
 .servicos__card-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
   color: #5a6b3f;
   font-weight: 700;
   text-decoration: none;

@@ -41,6 +41,9 @@
 }
 
 .footer__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
   color: rgba(249, 250, 251, 0.84);
   text-decoration: none;
   transition: color 0.2s ease;

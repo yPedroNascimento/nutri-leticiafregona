@@ -49,3 +49,6 @@ PROJECT_REQUIREMENTS.md
 
 # preetier file
 .prettierrc
+
+# Test artifacts
+/test-results
