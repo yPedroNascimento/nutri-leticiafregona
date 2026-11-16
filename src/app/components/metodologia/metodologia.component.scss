@@ -1,0 +1,101 @@
+.metodologia {
+  background: #f6efe4;
+}
+
+.metodologia__timeline {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.metodologia__step {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(92, 64, 51, 0.12);
+}
+
+.metodologia__step-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.metodologia__step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #5c4033 0%, #5a6b3f 100%);
+  color: white;
+  font-weight: 700;
+}
+
+.metodologia__step-title {
+  /* min-width: 0 allows the flex item to shrink and wrap instead of overflowing the card */
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-wrap: balance;
+  color: #2b3520;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .metodologia__step-title {
+    font-size: 0.9375rem;
+  }
+}
+
+.metodologia__step-text {
+  color: rgba(43, 53, 32, 0.78);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.metodologia__values {
+  margin-top: 2rem;
+  padding: 1.75rem;
+  border-radius: 1.75rem;
+  background: rgba(92, 64, 51, 0.05);
+  text-align: center;
+}
+
+.metodologia__values-title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.metodologia__values-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.metodologia__value {
+  padding: 0.75rem 1.25rem;
+  background: white;
+  border-radius: 999px;
+  color: #2b3520;
+  font-weight: 600;
+  border: 1px solid rgba(92, 64, 51, 0.1);
+}
+
+@media (min-width: 768px) {
+  .metodologia__timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .metodologia__timeline {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

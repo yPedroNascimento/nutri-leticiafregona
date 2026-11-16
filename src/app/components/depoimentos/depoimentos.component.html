@@ -1,0 +1,54 @@
+<section id="depoimentos" class="depoimentos" aria-labelledby="depoimentos-title">
+  <div class="container depoimentos__container">
+    <div class="section-header">
+      <span class="section-eyebrow">{{ content().depoimentos.eyebrow }}</span>
+      <h2 id="depoimentos-title" class="section-title">{{ content().depoimentos.title }}</h2>
+      <p class="section-text">{{ content().depoimentos.text }}</p>
+    </div>
+
+    <div class="depoimentos__carousel">
+      <button type="button" class="depoimentos__nav-btn" (click)="previous()" [attr.aria-label]="content().depoimentos.prevLabel">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <article class="depoimentos__card" aria-live="polite">
+        <div class="depoimentos__header">
+          <img class="depoimentos__avatar" [src]="depoimentos[currentIndex()].avatar" [alt]="'Foto do paciente ' + depoimentos[currentIndex()].name" loading="lazy" />
+          <div>
+            <strong class="depoimentos__name">{{ depoimentos[currentIndex()].name }}</strong>
+            <span class="depoimentos__role">{{ depoimentos[currentIndex()].role }}</span>
+          </div>
+        </div>
+
+        <p class="depoimentos__quote">“{{ depoimentos[currentIndex()].quote }}”</p>
+        <span class="depoimentos__result">{{ depoimentos[currentIndex()].result }}</span>
+
+        <div class="depoimentos__rating">
+          <span *ngFor="let star of [1,2,3,4,5]" class="depoimentos__star" [class.depoimentos__star--active]="star <= depoimentos[currentIndex()].rating" aria-hidden="true">★</span>
+          <span class="sr-only">{{ depoimentos[currentIndex()].rating }} de 5 estrelas</span>
+        </div>
+      </article>
+
+      <button type="button" class="depoimentos__nav-btn" (click)="next()" [attr.aria-label]="content().depoimentos.nextLabel">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <div class="depoimentos__dots" role="tablist" aria-label="Escolher depoimento">
+      <button
+        *ngFor="let d of depoimentos; index as i"
+        type="button"
+        class="depoimentos__dot"
+        [class.depoimentos__dot--active]="i === currentIndex()"
+        role="tab"
+        [attr.aria-selected]="i === currentIndex()"
+        [attr.aria-label]="'Depoimento ' + (i + 1)"
+        (click)="select(i)"
+      ></button>
+    </div>
+  </div>
+</section>

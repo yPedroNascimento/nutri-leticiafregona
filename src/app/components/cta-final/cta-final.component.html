@@ -1,0 +1,16 @@
+<section id="cta-final" class="cta-final" aria-labelledby="cta-final-title">
+  <div class="container cta-final__container">
+    <div class="cta-final__content">
+      <span class="cta-final__eyebrow">{{ content().ctaFinal.eyebrow }}</span>
+      <h2 id="cta-final-title" class="cta-final__title">{{ content().ctaFinal.heading }}</h2>
+      <p class="cta-final__text">{{ content().ctaFinal.description }}</p>
+    </div>
+
+    <div class="cta-final__actions">
+      <a class="cta-final__button" [href]="whatsappLink" target="_blank" rel="noopener" (click)="onCtaClick()">{{ content().ctaFinal.button }}</a>
+      <a class="cta-final__secondary" [href]="emailLink">{{ content().ctaFinal.secondary }}</a>
+    </div>
+
+    <p class="cta-final__note">{{ content().ctaFinal.note }}</p>
+  </div>
+</section>

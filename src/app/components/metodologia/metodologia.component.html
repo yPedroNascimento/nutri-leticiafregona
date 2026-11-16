@@ -1,0 +1,26 @@
+<section id="metodologia" class="metodologia" aria-labelledby="metodologia-title">
+  <div class="container metodologia__container">
+    <div class="section-header">
+      <span class="section-eyebrow">{{ content().metodologia.eyebrow }}</span>
+      <h2 id="metodologia-title" class="section-title">{{ content().metodologia.title }}</h2>
+      <p class="section-text">{{ content().metodologia.text }}</p>
+    </div>
+
+    <div class="metodologia__timeline">
+      <article *ngFor="let step of content().metodologia.steps" class="metodologia__step">
+        <div class="metodologia__step-head">
+          <span class="metodologia__step-number">{{ step.step }}</span>
+          <h3 class="metodologia__step-title">{{ limitText(step.title, TITLE_MAX_LENGTH) }}</h3>
+        </div>
+        <p class="metodologia__step-text">{{ step.description }}</p>
+      </article>
+    </div>
+
+    <div class="metodologia__values">
+      <span class="metodologia__values-title">{{ content().metodologia.valuesTitle }}</span>
+      <div class="metodologia__values-list">
+        <span *ngFor="let value of content().metodologia.values" class="metodologia__value">{{ value }}</span>
+      </div>
+    </div>
+  </div>
+</section>

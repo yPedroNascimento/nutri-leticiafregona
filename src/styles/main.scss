@@ -1,0 +1,55 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+:root {
+  font-family: $font-primary;
+  color: $cor-texto;
+  background-color: $cor-fundo;
+  font-size: $font-size-base;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: $cor-fundo;
+  color: $cor-texto;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* Títulos: Playfair Display, negrito e maiúsculas (PROJECT_REQUIREMENTS.md) */
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-display;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}

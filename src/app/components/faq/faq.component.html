@@ -1,0 +1,33 @@
+<section id="faq" class="faq" aria-labelledby="faq-title">
+  <div class="container faq__container">
+    <div class="section-header">
+      <span class="section-eyebrow">{{ content().faq.eyebrow }}</span>
+      <h2 id="faq-title" class="section-title">{{ content().faq.title }}</h2>
+      <p class="section-text">{{ content().faq.text }}</p>
+    </div>
+
+    <div class="faq__list">
+      <article *ngFor="let item of content().faq.items; index as i" class="faq__item">
+        <button
+          type="button"
+          class="faq__question"
+          (click)="toggle(i)"
+          [attr.aria-expanded]="openIndex() === i"
+          [attr.aria-controls]="'faq-answer-' + i"
+        >
+          <span>{{ item.question }}</span>
+          <span class="faq__icon" aria-hidden="true">{{ openIndex() === i ? '−' : '+' }}</span>
+        </button>
+        <div
+          class="faq__answer"
+          [class.faq__answer--open]="openIndex() === i"
+          [id]="'faq-answer-' + i"
+          role="region"
+          [attr.aria-hidden]="openIndex() !== i"
+        >
+          <p>{{ item.answer }}</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

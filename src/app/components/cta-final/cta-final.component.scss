@@ -1,0 +1,92 @@
+.cta-final {
+  background: linear-gradient(135deg, #2b3520 0%, #5a6b3f 100%);
+  color: white;
+  border-radius: 2rem;
+  margin: 0 1.25rem;
+  padding: 3.5rem 1.25rem;
+}
+
+.cta-final__container {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.cta-final__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.cta-final__title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: 0;
+  line-height: 1.1;
+  max-width: 40rem;
+}
+
+.cta-final__text {
+  max-width: 36rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.9;
+  margin: 0;
+}
+
+.cta-final__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.875rem;
+}
+
+.cta-final__secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-final__secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cta-final__note {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cta-final__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.25rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #5c4033;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cta-final__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .cta-final {
+    margin: 0 2rem;
+    padding: 4.5rem 2rem;
+  }
+}

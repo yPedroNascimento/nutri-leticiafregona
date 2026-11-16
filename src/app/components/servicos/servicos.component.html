@@ -1,0 +1,32 @@
+<section id="servicos" class="servicos" aria-labelledby="servicos-title">
+  <div class="container servicos__container">
+    <div class="section-header">
+      <span class="section-eyebrow">{{ content().servicos.eyebrow }}</span>
+      <h2 id="servicos-title" class="section-title">{{ content().servicos.title }}</h2>
+      <p class="section-text">{{ content().servicos.text }}</p>
+    </div>
+
+    <div class="servicos__grid">
+      <article *ngFor="let servico of content().servicos.cards" class="servicos__card">
+        <div class="servicos__icon">{{ servico.icon }}</div>
+        <h3 class="servicos__card-title">{{ servico.title }}</h3>
+        <p class="servicos__card-text">{{ servico.description }}</p>
+        <a class="servicos__card-link" [href]="servico.link">{{ content().servicos.readMore }}</a>
+      </article>
+    </div>
+
+    <div class="servicos__formats">
+      <h3 class="servicos__formats-title">{{ content().servicos.formatsTitle }}</h3>
+      <div class="servicos__formats-list">
+        <article *ngFor="let format of content().servicos.formats" class="servicos__format">
+          <span class="servicos__format-icon" aria-hidden="true">{{ format.icon }}</span>
+          <div>
+            <strong class="servicos__format-title">{{ format.title }}</strong>
+            <p class="servicos__format-text">{{ format.description }}</p>
+          </div>
+        </article>
+      </div>
+      <!-- <p class="servicos__disclaimer">{{ content().servicos.disclaimer }}</p> -->
+    </div>
+  </div>
+</section>

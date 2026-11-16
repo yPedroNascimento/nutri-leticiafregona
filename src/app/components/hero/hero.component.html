@@ -1,0 +1,28 @@
+<section id="top" class="hero" [attr.aria-label]="content().hero.title">
+  <div class="container hero__container">
+    <div class="hero__content">
+      <!-- <span class="section-eyebrow">{{ content().hero.eyebrow }}</span> -->
+      <h1 class="hero__title">{{ content().hero.title }}</h1>
+      <p class="hero__subtitle">{{ content().hero.subtitle }}</p>
+      <ul class="hero__highlights">
+        <li *ngFor="let item of content().hero.highlights">{{ item }}</li>
+      </ul>
+      <div class="hero__actions">
+        <a class="hero__button" href="#cta-final">{{ content().hero.ctaPrimary }}</a>
+        <a class="hero__secondary" href="#sobre">{{ content().hero.ctaSecondary }}</a>
+      </div>
+    </div>
+
+    <!-- <div class="hero__visual" aria-hidden="true">
+      <div class="hero__card hero__card--primary"></div>
+      <div class="hero__card hero__card--secondary"></div>
+      <div class="hero__badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+          <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+        </svg>
+        <span>{{ content().hero.badge }}</span>
+      </div>
+    </div> -->
+  </div>
+</section>

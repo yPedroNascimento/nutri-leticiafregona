@@ -1,0 +1,143 @@
+.depoimentos {
+  background: #f6efe4;
+}
+
+.depoimentos__carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.depoimentos__card {
+  padding: 2rem;
+  border-radius: 2rem;
+  background: white;
+  box-shadow: 0 18px 50px rgba(92, 64, 51, 0.08);
+  border: 1px solid rgba(92, 64, 51, 0.06);
+  min-height: 16rem;
+}
+
+.depoimentos__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.depoimentos__avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(92, 64, 51, 0.16);
+}
+
+.depoimentos__name {
+  display: block;
+  font-size: 1.05rem;
+  color: #2b3520;
+}
+
+.depoimentos__role {
+  display: block;
+  color: rgba(43, 53, 32, 0.62);
+}
+
+.depoimentos__quote {
+  color: #2b3520;
+  line-height: 1.9;
+  margin: 0 0 1rem;
+}
+
+.depoimentos__result {
+  display: inline-flex;
+  color: #5a6b3f;
+  font-weight: 700;
+}
+
+.depoimentos__rating {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.35rem;
+}
+
+.depoimentos__star {
+  color: rgba(209, 213, 219, 1);
+  font-size: 1rem;
+}
+
+.depoimentos__star--active {
+  color: #6d1f3a;
+}
+
+.depoimentos__nav-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid rgba(92, 64, 51, 0.16);
+  background: white;
+  color: #2b3520;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(92, 64, 51, 0.1);
+  flex-shrink: 0;
+}
+
+.depoimentos__nav-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.depoimentos__nav-btn:hover {
+  background: rgba(92, 64, 51, 0.08);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(92, 64, 51, 0.15);
+}
+
+.depoimentos__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 2rem;
+}
+
+.depoimentos__dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  border: none;
+  background: rgba(148, 163, 184, 0.5);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.depoimentos__dot:hover {
+  background: rgba(92, 64, 51, 0.4);
+}
+
+.depoimentos__dot--active {
+  background: #5c4033;
+  width: 2rem;
+}
+
+@media (min-width: 768px) {
+  .depoimentos__carousel {
+    gap: 1.5rem;
+  }
+
+  .depoimentos__nav-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .depoimentos__card {
+    padding: 2.5rem;
+  }
+}

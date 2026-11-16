@@ -1,0 +1,33 @@
+<section id="sobre" class="sobre" aria-labelledby="sobre-title">
+  <div class="container sobre__container">
+    <div class="sobre__visual">
+      <img
+        class="sobre__photo"
+        src="/images/foto_perfil.jpg"
+        [alt]="content().sobre.photoAlt"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="sobre__content">
+      <span class="section-eyebrow">{{ content().sobre.eyebrow }}</span>
+      <h2 id="sobre-title" class="section-title">{{ content().sobre.title }}</h2>
+
+      <div class="sobre__texts">
+        <p *ngFor="let paragraph of content().sobre.paragraphs" class="sobre__text">{{ paragraph }}</p>
+      </div>
+
+      <blockquote class="sobre__quote">
+        <span class="sobre__quote-title">{{ content().sobre.philosophyTitle }}</span>
+        <p>{{ content().sobre.philosophy }}</p>
+      </blockquote>
+
+      <div class="sobre__credentials" role="list" [attr.aria-label]="content().sobre.credentialsTitle">
+        <article *ngFor="let item of content().sobre.credentials" class="sobre__credential" role="listitem">
+          <span class="sobre__credential-value">{{ item.value }}</span>
+          <span class="sobre__credential-label">{{ item.label }}</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

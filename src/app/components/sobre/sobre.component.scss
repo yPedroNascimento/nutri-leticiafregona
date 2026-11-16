@@ -1,0 +1,119 @@
+.sobre {
+  background: #ffffff;
+}
+
+.sobre__container {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.sobre__visual {
+  width: 100%;
+  max-width: 26rem;
+  margin: 0 auto;
+}
+
+.sobre__photo {
+  width: 100%;
+  display: block;
+  border-radius: 2rem;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+  background: #ede4d5;
+  box-shadow: 0 24px 60px rgba(92, 64, 51, 0.14);
+}
+
+.sobre__content {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: start;
+}
+
+.sobre__texts {
+  display: grid;
+  gap: 1rem;
+}
+
+.sobre__text {
+  color: rgba(43, 53, 32, 0.78);
+  line-height: 1.85;
+  margin: 0;
+}
+
+.sobre__quote {
+  width: 100%;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #5a6b3f;
+  border-radius: 0 1rem 1rem 0;
+  background: rgba(90, 107, 63, 0.08);
+}
+
+.sobre__quote-title {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a5a31;
+}
+
+.sobre__quote p {
+  margin: 0;
+  color: #2b3520;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.sobre__credentials {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.sobre__credential {
+  display: grid;
+  gap: 0.25rem;
+  align-content: start;
+  padding: 1rem 1.125rem;
+  background: #f6efe4;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(92, 64, 51, 0.08);
+}
+
+.sobre__credential-value {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #4a5a31;
+  overflow-wrap: anywhere;
+}
+
+.sobre__credential-label {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: rgba(43, 53, 32, 0.62);
+}
+
+@media (max-width: 420px) {
+  .sobre__credentials {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .sobre__container {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .sobre__visual {
+    position: sticky;
+    top: 6rem;
+  }
+}
