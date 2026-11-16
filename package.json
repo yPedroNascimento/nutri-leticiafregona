@@ -8,7 +8,13 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:leticia-nutricionista": "node dist/leticia-nutricionista/server/server.mjs",
-    "share": "bash scripts/share.sh"
+    "share": "bash scripts/share.sh",
+    "test:mobile": "npm run test:layout && npm run test:drawer",
+    "test:mobile:headed": "npm run test:layout:headed && npm run test:drawer:headed",
+    "test:layout": "node scripts/mobile-audit.mjs",
+    "test:layout:headed": "node scripts/mobile-audit.mjs --headed",
+    "test:drawer": "node scripts/test-drawer.mjs",
+    "test:drawer:headed": "node scripts/test-drawer.mjs --headed"
   },
   "private": true,
   "packageManager": "npm@11.12.1",
@@ -33,6 +39,7 @@
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
     "jsdom": "^28.0.0",
+    "playwright-core": "^1.65.1",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
