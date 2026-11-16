@@ -44,7 +44,8 @@ __screenshots__/
 Thumbs.db
 
 # .md files
-*.md
+conhecimento-site-leticia-fregona.md
+PROJECT_REQUIREMENTS.md
 
 # preetier file
 .prettierrc
